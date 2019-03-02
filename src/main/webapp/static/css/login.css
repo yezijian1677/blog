@@ -1,0 +1,25 @@
+.parallax-container {
+    height: 620px;
+}
+
+body {
+    font-family: "Microsoft YaHei UI Light", monospace;
+}
+
+.login-form{
+    position: absolute;
+    top: 220px;
+    right: 130px;
+    height: 240px;
+    width: 300px;
+    color: white;
+}
+.login{
+    color: white;
+    background-color: #00BCD4;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    width: 300px;
+}
