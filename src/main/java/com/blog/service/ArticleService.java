@@ -25,4 +25,8 @@ public interface ArticleService {
     List<Article> selectByWord(String word);
 
     boolean insert(Article article);
+
+    List<Article> selectByYear(int year);
+
+    List<Article> selectByCategory(String category);
 }

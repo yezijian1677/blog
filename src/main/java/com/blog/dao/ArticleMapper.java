@@ -1,6 +1,7 @@
 package com.blog.dao;
 
 import com.blog.entity.Article;
+import com.blog.entity.Category;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -30,4 +31,9 @@ public interface ArticleMapper {
     Article selectNextArticle(Integer id);
 
     List<Article> selectByWord(String word);
+
+    List<Article> selectByYear(int year);
+
+    List<Article> selectArticleById(int id);
+
 }

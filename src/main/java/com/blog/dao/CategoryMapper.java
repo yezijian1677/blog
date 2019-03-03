@@ -1,7 +1,11 @@
 package com.blog.dao;
 
 import com.blog.entity.Category;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
+@Repository("categoryMapper")
 public interface CategoryMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -16,4 +20,8 @@ public interface CategoryMapper {
     int updateByPrimaryKeyWithBLOBs(Category record);
 
     int updateByPrimaryKey(Category record);
+
+    Category selectArticleIdByCategory(String category);
+
+    List<Category> queryAllCategory();
 }

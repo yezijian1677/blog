@@ -1,7 +1,9 @@
 package com.blog.dao;
 
 import com.blog.entity.User;
+import org.springframework.stereotype.Repository;
 
+@Repository("userMapper")
 public interface UserMapper {
     int deleteByPrimaryKey(Integer userId);
 

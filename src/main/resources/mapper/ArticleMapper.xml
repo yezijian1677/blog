@@ -11,6 +11,7 @@
       <arg column="click" jdbcType="INTEGER" javaType="java.lang.Integer" />
       <arg column="time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
       <arg column="catagory_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="content" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
     </constructor>
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.blog.entity.Article" >
@@ -199,5 +200,14 @@
     from article
     where title LIKE CONCAT(CONCAT('%', #{word}), '%') OR content  LIKE CONCAT(CONCAT('%', #{word}), '%')
   </select>
+
+  <select id="selectByYear" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select * from article where time regexp #{year};
+  </select>
+
+  <select id="selectArticleById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select * from article where catagory_id = #{id};
+  </select>
+
 
 </mapper>

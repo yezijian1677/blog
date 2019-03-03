@@ -81,4 +81,19 @@
       ip = #{ip,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+  <select id="selectRencent" resultMap="BaseResultMap" parameterType="java.lang.Integer"  >
+    select
+    <include refid="Base_Column_List" />
+    from user_login_info
+    where user_id = #{userId,jdbcType=INTEGER}
+    ORDER BY id DESC
+    LIMIT 2
+  </select>
+
+  <select id="selectCountByUserId" resultType="java.lang.Integer" parameterType="java.lang.Integer" >
+    select count(*)
+    from user_login_info
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
 </mapper>

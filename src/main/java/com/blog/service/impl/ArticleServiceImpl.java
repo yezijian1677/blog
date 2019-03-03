@@ -1,5 +1,6 @@
 package com.blog.service.impl;
 
+import com.blog.dao.CategoryMapper;
 import com.blog.service.ArticleService;
 import com.blog.dao.ArticleMapper;
 import com.blog.entity.Article;
@@ -14,6 +15,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Resource(name = "articleMapper")
     private ArticleMapper articleMapper;
+
+    @Resource(name = "categoryMapper")
+    private CategoryMapper categoryMapper;
 
     @Override
     public Article selectById(Integer id) {
@@ -60,7 +64,19 @@ public class ArticleServiceImpl implements ArticleService {
         return articleMapper.selectByWord(word);
     }
 
+    @Override
     public boolean insert(Article article) {
         return articleMapper.insert(article)>0;
+    }
+
+    @Override
+    public List<Article> selectByYear(int year) {
+        return articleMapper.selectByYear(year);
+    }
+
+    @Override
+    public List<Article> selectByCategory(String category) {
+        int id = categoryMapper.selectArticleIdByCategory(category).getId();
+        return articleMapper.selectArticleById(id);
     }
 }

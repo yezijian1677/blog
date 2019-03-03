@@ -7,6 +7,7 @@
       <arg column="name" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="keywords" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="type" jdbcType="BIT" javaType="java.lang.Boolean" />
+      <arg column="desc" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
     </constructor>
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.blog.entity.Category" >
@@ -112,4 +113,12 @@
       type = #{type,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectArticleIdByCategory" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select * from category where name = #{category};
+  </select>
+
+  <select id="queryAllCategory" resultMap="BaseResultMap">
+    select * from category order by id desc;
+  </select>
 </mapper>
