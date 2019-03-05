@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
+import java.util.Map;
 
 @Controller("userController")
 @RequestMapping
@@ -40,7 +41,7 @@ public class UserController {
             userLoginInfo.setUserId(userId1);
             int log = adminLoginService.insert(userLoginInfo);
 
-            return "redirect:article/list";
+            return "admin/";
         }
         return "redirect:to_login";
     }
@@ -49,5 +50,10 @@ public class UserController {
     public String quit(HttpSession session){
         session.setAttribute("user", null);
         return "redirect:to_login";
+    }
+
+    @RequestMapping("/about")
+    public String list(){
+        return "about";
     }
 }
