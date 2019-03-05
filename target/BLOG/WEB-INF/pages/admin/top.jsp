@@ -8,7 +8,7 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
 
-    <title> 爱慕课OA--欢迎使用爱慕课OA系统 </title>
+    <title> Curtains_blog_admin </title>
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/assets/skin/default_skin/css/theme.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/assets/admin-tools/admin-forms/css/admin-forms.css">
@@ -32,7 +32,7 @@
     <header class="navbar navbar-fixed-top navbar-shadow">
         <div class="navbar-branding">
             <a class="navbar-brand" href="dashboard.html">
-                <b>爱慕课</b>OA
+                <b>Curtains</b>OA
             </a>
             <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
         </div>
@@ -49,10 +49,6 @@
                             <span class="fa fa-user"></span> 个人信息
                             <span class="label label-warning"></span>
                         </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="${pageContext.request.contextPath}/to_change_password" class="animated animated-short fadeInUp">
-                            <span class="fa fa-gear"></span> 设置密码 </a>
                     </li>
                     <li class="dropdown-footer">
                         <a href="${pageContext.request.contextPath}/quit" class="">
@@ -88,11 +84,11 @@
                 </div>
             </header>
             <ul class="nav sidebar-menu">
-                <li class="sidebar-label pt20">日常管理</li>
+                <li class="sidebar-label pt20">文章管理</li>
                 <li>
                     <a href="${pageContext.request.contextPath}/claim_voucher/deal">
                         <span class="glyphicon glyphicon-book"></span>
-                        <span class="sidebar-title">待处理报销单</span>
+                        <span class="sidebar-title">文章列表</span>
                         <span class="sidebar-title-tray">
                 <span class="label label-xs bg-primary">New</span>
               </span>

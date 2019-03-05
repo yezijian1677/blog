@@ -41,7 +41,7 @@
                 <div class="panel-body pn">
                     <table id="message-table" class="table admin-form theme-warning tc-checkbox-1">
                         <thead>
-                        <tr class="">
+                        <tr>
                             <th class="text-center hidden-xs">Select</th>
                             <th class="hidden-xs">序号</th>
                             <th class="hidden-xs">标题</th>
@@ -52,7 +52,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${list}" var="emp">
+                        <c:forEach items="${list}" var="article">
                             <tr class="message-unread">
                                 <td class="hidden-xs">
                                     <label class="option block mn">
@@ -60,19 +60,20 @@
                                         <span class="checkbox mn"></span>
                                     </label>
                                 </td>
-                                <td>${emp.sn}</td>
-                                <td>${emp.name}</td>
-                                <td class="text-center fw600">${emp.department.name}</td>
+                                <td>${article.id}</td>
+                                <td>${article.title}</td>
+                                <td class="text-center fw600">${article.keywords}</td>
                                 <td class="hidden-xs">
-                                    <span class="badge badge-warning mr10 fs11">${emp.post}</span>
+                                    <span class="badge badge-warning mr10 fs11">${article.category.name}</span>
                                 </td>
+                                <td>${article.time}</td>
                                 <td>
-                                    <a href="${pageContext.request.contextPath}/employee/to_update?sn=${emp.sn}">编辑</a>
-                                    <a href="${pageContext.request.contextPath}/employee/remove?sn=${emp.sn}">删除</a>
+                                    <a href="${pageContext.request.contextPath}/admin/article/to_edit?id=${article.id}">编辑</a>
+                                    <a href="${pageContext.request.contextPath}/admin/article/delete?id=${article.id}">删除</a>
                                 </td>
                             </tr>
                         </c:forEach>
-                        </tbody>
+                        </tbody>c
                     </table>
                 </div>
             </div>
