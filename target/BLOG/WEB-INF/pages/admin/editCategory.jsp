@@ -10,6 +10,7 @@
         <div class="admin-form theme-primary mw1000 center-block" style="padding-bottom: 175px;">
             <div class="panel heading-border">
                 <form:form action="${pageContext.request.contextPath}/admin/category/edit" modelAttribute="category"  id="admin-form" name="addForm">
+                    <form:hidden path="id"/>
                     <div class="panel-body bg-light">
                         <div class="section-divider mt20 mb40">
                             <span> 基本信息 </span>

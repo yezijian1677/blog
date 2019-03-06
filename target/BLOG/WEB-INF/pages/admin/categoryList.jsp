@@ -63,7 +63,12 @@
                                 <td>${category.name}</td>
                                 <td class="text-center fw600">${category.keywords}</td>
                                 <td class="hidden-xs">
-                                    <span class="badge badge-warning mr10 fs11">${category.type}</span>
+                                    <c:if test="${category.type==true}">
+                                     <span class="badge badge-warning mr10 fs11">留言</span>
+                                    </c:if>
+                                    <c:if test="${category.type==false}">
+                                        <span class="badge badge-warning mr10 fs11">文章</span>
+                                    </c:if>
                                 </td>
                                 <td>
                                     <a href="${pageContext.request.contextPath}/admin/category/to_edit?id=${category.id}">编辑</a>

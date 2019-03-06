@@ -16,17 +16,20 @@
 
     <mvc:default-servlet-handler/>
 
+    <!--编辑器文件上传-->
+    <!--<mvc:resources location="static/image_ueditor/" mapping="static/image_ueditor/**"/>-->
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--<mvc:interceptors>-->
-    <!--<mvc:interceptor>-->
-    <!--<mvc:mapping path="/**"/>-->
-    <!--<bean class="com.curtains.blog_jsp.global."/>-->
-    <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <mvc:interceptors>
+    <mvc:interceptor>
+    <mvc:mapping path="/**"/>
+    <bean class="com.blog.global.LoginInterceptor"/>
+    </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>
