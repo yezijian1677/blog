@@ -45,7 +45,7 @@
                 </a>
                 <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
                     <li class="list-group-item">
-                        <a href="${pageContext.request.contextPath}/self" class="animated animated-short fadeInUp">
+                        <a href="${pageContext.request.contextPath}/admin/article/list" class="animated animated-short fadeInUp">
                             <span class="fa fa-user"></span> 个人信息
                             <span class="label label-warning"></span>
                         </a>

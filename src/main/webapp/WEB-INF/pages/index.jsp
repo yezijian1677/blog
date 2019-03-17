@@ -38,8 +38,8 @@
         <div class="col s12 m12 l12 xl12">
             <div class="row center">
                 <ul class="pagination">
-                    <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+                    <li class="disabled"><a href="${pageContext.request.contextPath}/article/list?page=${page.prePage}"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="waves-effect"><a href="${pageContext.request.contextPath}/article/list?page=${page.nextPage}"><i class="material-icons">chevron_right</i></a></li>
                 </ul>
             </div>
         </div>
