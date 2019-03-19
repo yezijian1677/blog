@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EditorMD</title>
+    <link rel="stylesheet" type="text/css" href="./static/editor.md-master/lib/codemirror/codemirror.min.css" />
+    <script type="text/javascript" src="./static/lib/jQuery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./static/editor.md-master/editormd.min.js"></script>
+    <script type="text/javascript" src="./static/editor.md-master/languages/zh-tw.js"></script>
+    <link rel="stylesheet" type="text/css" href="./static/editor.md-master/css/editormd.css" />
+</head>
+
+<body>
+
+<div id="test-editormd">
+    <textarea style="display:none;"></textarea>
+    <textarea class="editor-md-html" name="editor-md-html"></textarea>
+</div>
+
+<script>
+    $("#my_submit").click(function () {
+        alert("正在提交");
+        submit_atricle();
+    })
+
+    function submit_atricle() {
+        var title = $("#title").val();
+        var htmlContent = $("#editor-md-html").val();
+        var markdownContent = $("#editor-md-doc").val();
+        $.ajax({
+            url: "<%=path%>/fileUpload/editorContent",
+            data: JSON.stringify({title: title, htmlContent: htmlContent, markdownContent: markdownContent}),
+            type: "POST",
+            contentType: 'application/json',
+            success: function () {
+                alert("发布成功");
+            },
+            error: function () {
+                alert("发布失败");
+            }
+        })
+    }
+</script>
+
+<script type="text/javascript">
+    var testEditor;
+
+    $(function() {
+        testEditor = editormd("test-editormd", {
+            width   : "90%",
+            height  : 640,
+            syncScrolling : "single",
+            path    : "./static/editor.md-master/lib/",
+
+            emoji: true,//emoji表情，默认关闭
+
+            //开启图片上传
+            imageUpload : true,
+            imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+            imageUploadURL : "${pageContext.request.contextPath}/fileUpload/editorMDUpload",
+            saveHTMLToTextarea : true
+        });
+
+        /*
+        // or
+        testEditor = editormd({
+            id      : "test-editormd",
+            width   : "90%",
+            height  : 640,
+            path    : "../lib/"
+        });
+        */
+    });
+</script>
+
+
+</body>
+
+</html>

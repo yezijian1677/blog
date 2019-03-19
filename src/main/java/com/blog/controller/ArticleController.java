@@ -96,25 +96,10 @@ public class ArticleController {
         return "tag";
     }
 
-    @RequestMapping(value = "/list/category", params = {"cate", "page"})
-    public String listCategory(Map<String, Object> map, String cate, @RequestParam(defaultValue = "1", required = true)Integer page){
-        Integer pageSize = 4;
-        List<Article> list;
-        if (page!=null){
-            PageHelper.startPage(page, pageSize);
-            try {
-                list = articleService.selectByCategory(cate);
-                PageInfo<Article> pageInfo = new PageInfo<Article>(list);
-                map.put("page", pageInfo);
-                map.put("cate", list.get(0).getCatagoryId());
-            }finally {
-                PageHelper.clearPage();
-            }
-        }else {
-            list = new ArrayList<Article>();
-        }
+    @RequestMapping(value = "/list/category", params = "cate")
+    public String listCategory(Map<String, Object> map, String cate){
 
-        map.put("ArticleList", list);
+        map.put("ArticleList", articleService.selectByCategory(cate));
         map.put("CategoryList", categoryService.queryAll());
 
         return "tag";

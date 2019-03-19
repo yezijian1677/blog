@@ -21,7 +21,7 @@
                 <div class="col s12 m12 l12 xl12">
                     <a class="chip hoverable z-depth-1 cyan lighten-3" href="${pageContext.request.contextPath}/article/list/category">All</a>
                     <c:forEach items="${CategoryList}" var="category">
-                        <a class="chip hoverable z-depth-1 cyan lighten-3" href="${pageContext.request.contextPath}/article/list/category?cate=${category.id}">${category.name}</a>
+                        <a class="chip hoverable z-depth-1 cyan lighten-3" href="${pageContext.request.contextPath}/article/list/category?cate=${category.name}">${category.name}</a>
                     </c:forEach>
                 </div>
                 <br>
@@ -57,8 +57,8 @@
                 <div class="col s12 m12 l12 xl12">
                     <div class="row center">
                         <ul class="pagination">
-                            <li class="waves-effect"><a href="${pageContext.request.contextPath}/article/list/category?cate=${cate}&page=${page.prePage}"><i class="material-icons">chevron_left</i></a></li>
-                            <li class="waves-effect"><a href="${pageContext.request.contextPath}/article/list/category?cate=${cate}&page=${page.nextPage}"><i class="material-icons">chevron_right</i></a></li>
+                            <li class="waves-effect"><a href="${pageContext.request.contextPath}/article/list/category?page=${page.prePage}"><i class="material-icons">chevron_left</i></a></li>
+                            <li class="waves-effect"><a href="${pageContext.request.contextPath}/article/list/category?page=${page.nextPage}"><i class="material-icons">chevron_right</i></a></li>
                         </ul>
                     </div>
                 </div>

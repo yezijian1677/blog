@@ -22,7 +22,7 @@
         <a href="#" class="brand-logo">Curtains</a>
         <ul class="right">
             <li><a href="#"><i class="material-icons">search</i></a></li>
-            <li><a href="#"><i class="material-icons hide-on-med-and-down">person</i></a></li>
+            <li><a href="${pageContext.request.contextPath}/to_login"><i class="material-icons hide-on-med-and-down">person</i></a></li>
         </ul>
         <ul class="left hide-on-large-only">
             <li><a href="#"><i class="material-icons">person</i></a></li>
