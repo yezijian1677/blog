@@ -4,7 +4,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>关于-Curtains的博客</title>
+    <title>归档</title>
 
     <!--Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

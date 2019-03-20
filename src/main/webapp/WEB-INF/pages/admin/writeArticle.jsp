@@ -10,7 +10,7 @@
         </div>
         <div class="admin-form theme-primary mw1000 center-block" style="padding-bottom: 175px;height: 1300px;">
             <div class="panel heading-border">
-                <form action="${pageContext.request.contextPath}/admin/article/add" method="post" name="add" style="height: 1300px;">
+                <form action="${pageContext.request.contextPath}/admin/article/add" method="post" name="add" enctype="multipart/form-data" style="height: 1300px;">
                     <div class="panel-body bg-light" style="height: 1300px;">
                         <div class="section-divider mt20 mb40">
                             <span> 基本信息 </span>
@@ -30,8 +30,11 @@
                             </div>
                         </div>
                         <div class="section row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <input id="keywords" name="keywords" class="gui-input" placeholder="关键字">
+                            </div>
+                            <div class="col-md-6">
+                                <input  type="file" id="pic" name="pic" class="gui-file">
                             </div>
                         </div>
                         <div class="section row">

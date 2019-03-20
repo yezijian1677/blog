@@ -26,8 +26,11 @@
                             </div>
                         </div>
                         <div class="section row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <input id="keywords" name="keywords" class="gui-input" value="${article.keywords}" }>
+                            </div>
+                            <div class="col-md-6">
+                                <input  type="file" id="pic" name="pic" class="gui-file" value="${article.pic}">
                             </div>
                         </div>
                         <div class="section row">

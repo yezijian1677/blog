@@ -50,10 +50,10 @@
 
 <form class="login-form" method="post" action="${pageContext.request.contextPath}/login">
     <div class="username">
-        <input type="text" name="userId" id="userId" placeholder="USERNAME"/>
+        <input type="text" required="required" name="userId" id="userId" placeholder="USERNAME"/>
     </div>
     <div class="password">
-        <input type="text" name="password" id="password" placeholder="PASSWORD"/>
+        <input type="password" required="required" name="password" id="password" placeholder="PASSWORD"/>
     </div>
     <input type="submit" class="login" value="log in"/>
 </form>
