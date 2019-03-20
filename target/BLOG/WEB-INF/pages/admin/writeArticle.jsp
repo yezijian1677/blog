@@ -1,17 +1,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="top.jsp"/>
-<script type="text/javascript" charset="utf-8" src="${pageContext.request.contextPath}/static/ueditor1_4_3_3/lang/zh-cn/zh-cn.js"></script>
+
 <section id="content" class="table-layout animated fadeIn">
     <div class="tray tray-center">
         <div class="content-header">
             <h2> 书写博客 </h2>
             <p class="lead"></p>
         </div>
-        <div class="admin-form theme-primary mw1000 center-block" style="padding-bottom: 175px;height: 1125px;">
+        <div class="admin-form theme-primary mw1000 center-block" style="padding-bottom: 175px;height: 1300px;">
             <div class="panel heading-border">
-                <form action="${pageContext.request.contextPath}/admin/article/add" method="post" name="add" style="height: 1125px;">
-                    <div class="panel-body bg-light" style="height: 1125px;">
+                <form action="${pageContext.request.contextPath}/admin/article/add" method="post" name="add" style="height: 1300px;">
+                    <div class="panel-body bg-light" style="height: 1300px;">
                         <div class="section-divider mt20 mb40">
                             <span> 基本信息 </span>
                         </div>
@@ -42,10 +42,14 @@
 
 
                         <div class="panel-footer text-right">
-                            <textarea name="content" id="myEditor" style="height: 515px;">博客内容</textarea>
-                            <script type="text/javascript">
-                                UE.getEditor('myEditor');
-                            </script>
+                            <!-- editormd start -->
+                            <div class="editormd" id="test-editormd">
+                                <textarea class="editormd-markdown-textarea" name="content" id="editormd"></textarea>
+                                <!-- 第二个隐藏文本域，用来构造生成的HTML代码，方便表单POST提交，这里的name可以任意取，后台接受时以这个name键为准 -->
+                                <!-- html textarea 需要开启配置项 saveHTMLToTextarea == true -->
+                                <textarea class="editormd-html-textarea" name="editorhtml" id="editorhtml"></textarea>
+                            </div>
+                            <!-- editormd end -->
                         </div>
 
                         <div class="panel-footer text-right">

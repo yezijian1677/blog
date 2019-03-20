@@ -4,7 +4,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>关于-Curtains的博客</title>
+    <title>登录</title>
 
     <!--Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,15 +22,15 @@
         <a href="#" class="brand-logo">Curtains</a>
         <ul class="right">
             <li><a href="#"><i class="material-icons">search</i></a></li>
-            <li><a href="#"><i class="material-icons hide-on-med-and-down">person</i></a></li>
+            <li><a href="${pageContext.request.contextPath}/to_login"><i class="material-icons hide-on-med-and-down">person</i></a></li>
         </ul>
         <ul class="left hide-on-large-only">
-            <li><a href="#"><i class="material-icons">person</i></a></li>
+            <li><a href="${pageContext.request.contextPath}/to_login"><i class="material-icons">person</i></a></li>
         </ul>
     </div>
     <div class="nav-content container">
         <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="${pageContext.request.contextPath}/article/list" class="active">首页</a></li>
+            <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list">首页</a></li>
             <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list/category">标签</a></li>
             <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list/title">归档</a></li>
             <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/about">关于</a></li>
@@ -40,11 +40,11 @@
 
 <!--parallax-->
 <div class="parallax-container">
-    <div class="parallax"><img src="${pageContext.request.contextPath}/static/img/about_bg.png"></div>
+    <div class="parallax"><img src="${pageContext.request.contextPath}/static/img/5.jpg"></div>
     <div class="center white-text">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <h3>Kindem</h3>
-        <h4>一生想做浪漫Coder</h4>
+        <h3>Curtains</h3>
+        <h4>I will find you</h4>
     </div>
 </div>
 

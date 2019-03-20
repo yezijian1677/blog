@@ -19,6 +19,7 @@
     <!--编辑器文件上传-->
     <!-- 访问静态资源 -->
     <mvc:resources mapping="/static/**" location="/static/" />
+    <mvc:resources location="/static/editor.md-master/" mapping="/editor.md-master/**"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>

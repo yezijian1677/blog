@@ -1,6 +1,62 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:include page="top.jsp"/>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>主页-Curtains的博客</title>
+
+    <!--Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Materialize-->
+    <link href="${pageContext.request.contextPath}/static/lib/materialize/css/materialize.min.css" rel="stylesheet" media="screen,projection">
+
+    <!--Index Css-->
+    <link href="${pageContext.request.contextPath}/static/css/index.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/editor.md-master/css/editormd.preview.css"/>
+
+    <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon"/>
+
+
+    <%--markdown--%>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/lib/jQuery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/static/editor.md-master/editormd.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/editor.md-master/lib/marked.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/editor.md-master/lib/prettify.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/editor.md-master/lib/raphael.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/editor.md-master/lib/underscore.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/editor.md-master/lib/sequence-diagram.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/editor.md-master/lib/flowchart.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/editor.md-master/lib/jquery.flowchart.min.js"></script>
+
+
+</head>
+<body>
+<!--导航栏-->
+<nav class="nav-extended cyan">
+    <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">Curtains</a>
+        <ul class="right">
+            <li><a href="#"><i class="material-icons">search</i></a></li>
+            <li><a href="${pageContext.request.contextPath}/to_login"><i class="material-icons hide-on-med-and-down">person</i></a></li>
+        </ul>
+        <ul class="left hide-on-large-only">
+            <li><a href="#"><i class="material-icons">person</i></a></li>
+        </ul>
+    </div>
+    <div class="nav-content container">
+
+        <ul class="tabs tabs-transparent">
+            <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list">首页</a></li>
+            <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list/category">标签</a></li>
+            <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list/title">归档</a></li>
+            <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/about">关于</a></li>
+        </ul>
+    </div>
+</nav>
+
 
 <div class="section teal lighten-5">
     <div class="container display-none" id="post-container">
@@ -16,32 +72,13 @@
                     <a href="#"><div class="chip hoverable z-depth-1">&nbsp;&nbsp;${detail.keywords}&nbsp;&nbsp;</div></a>
                 </div>
                 <div class="row">
+                    <%--markdown文字--%>
                     <div class="col s12 m12 l12 xl12">
-                        <p>
-                            ${detail.content}
-                        </p>
-                        <p>
-                            有一天，我路上看到了个心动的女生，很心动那种，我犹豫了很久要不要去搭讪。最后心动战胜了搭讪焦虑，我鼓足了勇气，硬着头皮走过去搭讪，跟她说我想认识她，想加她微信，我被拒绝了。只记得我当时觉得很尴尬，脸火辣辣的，感觉身边所有的人都在嘲笑我，恨不得地上能有个裂缝能让我钻进去。
-                        </p>
-                        <p>
-                            有一天，我路上看到了个心动的女生，很心动那种，我犹豫了很久要不要去搭讪。最后心动战胜了搭讪焦虑，我鼓足了勇气，硬着头皮走过去搭讪，跟她说我想认识她，想加她微信，我被拒绝了。只记得我当时觉得很尴尬，脸火辣辣的，感觉身边所有的人都在嘲笑我，恨不得地上能有个裂缝能让我钻进去。
-                        </p>
-                        <p>
-                            有一天，我路上看到了个心动的女生，很心动那种，我犹豫了很久要不要去搭讪。最后心动战胜了搭讪焦虑，我鼓足了勇气，硬着头皮走过去搭讪，跟她说我想认识她，想加她微信，我被拒绝了。只记得我当时觉得很尴尬，脸火辣辣的，感觉身边所有的人都在嘲笑我，恨不得地上能有个裂缝能让我钻进去。
-                        </p>
-                        <p>
-                            有一天，我路上看到了个心动的女生，很心动那种，我犹豫了很久要不要去搭讪。最后心动战胜了搭讪焦虑，我鼓足了勇气，硬着头皮走过去搭讪，跟她说我想认识她，想加她微信，我被拒绝了。只记得我当时觉得很尴尬，脸火辣辣的，感觉身边所有的人都在嘲笑我，恨不得地上能有个裂缝能让我钻进去。
-                        </p>
-                        <p>
-                            有一天，我路上看到了个心动的女生，很心动那种，我犹豫了很久要不要去搭讪。最后心动战胜了搭讪焦虑，我鼓足了勇气，硬着头皮走过去搭讪，跟她说我想认识她，想加她微信，我被拒绝了。只记得我当时觉得很尴尬，脸火辣辣的，感觉身边所有的人都在嘲笑我，恨不得地上能有个裂缝能让我钻进去。
-                        </p>
-                        <p>
-                            有一天，我路上看到了个心动的女生，很心动那种，我犹豫了很久要不要去搭讪。最后心动战胜了搭讪焦虑，我鼓足了勇气，硬着头皮走过去搭讪，跟她说我想认识她，想加她微信，我被拒绝了。只记得我当时觉得很尴尬，脸火辣辣的，感觉身边所有的人都在嘲笑我，恨不得地上能有个裂缝能让我钻进去。
-                        </p>
-                        <p>
-                            有一天，我路上看到了个心动的女生，很心动那种，我犹豫了很久要不要去搭讪。最后心动战胜了搭讪焦虑，我鼓足了勇气，硬着头皮走过去搭讪，跟她说我想认识她，想加她微信，我被拒绝了。只记得我当时觉得很尴尬，脸火辣辣的，感觉身边所有的人都在嘲笑我，恨不得地上能有个裂缝能让我钻进去。
-                        </p>
+                        <div id="markdownView" style="width: 95%;background-color: #F6F6F6;">
+                            <textarea style="display:none;" name="content"> ${detail.content}</textarea>
+                        </div>
                     </div>
+
                 </div>
                 <br>
             </div>
@@ -61,5 +98,27 @@
         <li><a class="btn-floating blue"><i class="material-icons">bug_report</i></a></li>
     </ul>
 </div>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        var markdownView;
+        markdownView = editormd.markdownToHTML("markdownView", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            codeFold: true,
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true,  // 默认不解析
+            // previewTheme: "white" //预览主题
+            // theme: "gray"//顶部的主题
+
+        });
+
+    })
+
+
+</script>
 
 <jsp:include page="bottom.jsp"/>

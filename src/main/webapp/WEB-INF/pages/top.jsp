@@ -4,7 +4,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>主页-Curtains的博客</title>
+    <title>Curtains</title>
 
     <!--Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,16 +25,16 @@
             <li><a href="${pageContext.request.contextPath}/to_login"><i class="material-icons hide-on-med-and-down">person</i></a></li>
         </ul>
         <ul class="left hide-on-large-only">
-            <li><a href="#"><i class="material-icons">person</i></a></li>
+            <li><a href="${pageContext.request.contextPath}/to_login"><i class="material-icons">person</i></a></li>
         </ul>
     </div>
     <div class="nav-content container">
 
         <ul class="tabs tabs-transparent">
             <li class="tab"><a href="${pageContext.request.contextPath}/article/list" class="active">首页</a></li>
-            <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list/category">标签</a></li>
-            <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list/title">归档</a></li>
-            <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/about">关于</a></li>
+            <li class="tab"><a href="${pageContext.request.contextPath}/article/list/category">标签</a></li>
+            <li class="tab"><a href="${pageContext.request.contextPath}/article/list/title">归档</a></li>
+            <li class="tab"><a href="${pageContext.request.contextPath}/about">关于</a></li>
         </ul>
     </div>
 </nav>

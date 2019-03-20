@@ -9,6 +9,7 @@ import com.sun.org.apache.xerces.internal.xs.StringList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -43,7 +44,7 @@ public class ArticleAdminController {
      * @param response
      * @return
      */
-    @RequestMapping("/add")
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String add(HttpServletRequest request, HttpServletResponse response){
 
         Article article = new Article();
@@ -51,6 +52,12 @@ public class ArticleAdminController {
         String keywords = request.getParameter("keywords");
         int categoryId = Integer.parseInt(request.getParameter("categoryId"));
         String content = request.getParameter("content");
+//        System.out.println("edmdHtml.leng="+content.length());
+
+        String contentHTML = request.getParameter("editorhtml");
+//        System.out.println("edmdHtml.leng="+contentHTML.length());
+
+
         String describle = request.getParameter("describle");
         Date date = new Date();
         article.setTime(date);

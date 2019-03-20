@@ -44,6 +44,7 @@ public class UserController {
     public String login(HttpSession session, @RequestParam String userId, @RequestParam String password, HttpServletRequest request){
         int userId1 = Integer.parseInt(userId);
         if (adminService.getById(userId1).getPassword().equals(password)) {
+
             session.setAttribute("user", adminService.getById(userId1));
 //            System.out.println("登录成功");
             String ip=request.getRemoteAddr();
@@ -76,7 +77,6 @@ public class UserController {
             articleDTOArrayList.add(articleDTO);
         }
 
-        map.put("list", articleDTOArrayList);
 
 
         return "admin/articleList";

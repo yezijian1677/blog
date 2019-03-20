@@ -37,4 +37,5 @@
         <!--扫描这个包以下所有的接口 以及配置的映射文件-->
         <property name="basePackage" value="com.blog.dao"/>
     </bean>
+
 </beans>

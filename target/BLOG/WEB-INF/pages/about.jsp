@@ -4,7 +4,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>主页-Curtains的博客</title>
+    <title>关于</title>
 
     <!--Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,8 +12,8 @@
     <!--Materialize-->
     <link href="${pageContext.request.contextPath}/static/lib/materialize/css/materialize.min.css" rel="stylesheet" media="screen,projection">
 
-    <!--Index Css-->
-    <link href="${pageContext.request.contextPath}/static/css/about.css" rel="stylesheet">
+    <!--About Css-->
+    <link href="${pageContext.request.contextPath}/static/css/login.css" rel="stylesheet">
 </head>
 <body>
 <!--导航栏-->
@@ -25,26 +25,25 @@
             <li><a href="${pageContext.request.contextPath}/to_login"><i class="material-icons hide-on-med-and-down">person</i></a></li>
         </ul>
         <ul class="left hide-on-large-only">
-            <li><a href="#"><i class="material-icons">person</i></a></li>
+            <li><a href="${pageContext.request.contextPath}/to_login"><i class="material-icons">person</i></a></li>
         </ul>
     </div>
     <div class="nav-content container">
-
         <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="${pageContext.request.contextPath}/article/list">首页</a></li>
+            <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list">首页</a></li>
             <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list/category">标签</a></li>
             <li class="tab"><a target="_blank" href="${pageContext.request.contextPath}/article/list/title">归档</a></li>
-            <li class="tab"><a target="_blank"  href="${pageContext.request.contextPath}/about" class="active">关于</a></li>
+            <li class="tab"><a  href="${pageContext.request.contextPath}/about" class="active">关于</a></li>
         </ul>
     </div>
 </nav>
 <!--parallax-->
-<div class="parallax-container" style="height: 620px;">
-    <div class="parallax"><img src="${pageContext.request.contextPath}/static/img/about_bg.png"></div>
+<div class="parallax-container">
+    <div class="parallax"><img src="${pageContext.request.contextPath}/static/img/6.jpg"></div>
     <div class="center white-text">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <h3>Curtains</h3>
-        <h4>一生想做浪漫Coder</h4>
+        <h4>I'll think of you every step of the way</h4>
     </div>
 </div>
 
@@ -56,8 +55,7 @@
                 <br><br><br><br><br><br><br><br><br><br>
                 <h2>简介</h2>
                 <p class="flow-text">男，20岁，天津理工大学计算机学院在校本科生，目前大三，热爱生活，热爱编程。
-                    喜欢学习新技术，自己捣鼓项目，学习过很多门编程语言，接触过很多技术。最喜欢的技术是Web
-                    开发。最大的梦想是能够成为一名Java web开发。</p>
+                    喜欢学习新技术，自己捣鼓项目。喜欢前端，但是美感太差，所以现在在捣鼓后台开发，每天头铁锤bug。</p>
                 <br><br><br><br><br><br><br><br><br><br>
             </div>
         </div>
@@ -105,32 +103,30 @@
                 <br>
                 <h4>语言</h4>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;C&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;C++&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;C#&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Java&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Kotlin&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Python&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Html&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Css&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;JavaScript&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Markdown&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;SQL&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Arduino&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Assembly&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Python&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;ES6&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;PHP&nbsp;&nbsp;</div>
                 <h4>框架/库</h4>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;jQuery&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Bootstrap&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Materialize&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Django&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;OpenCV&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Spring&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;SpringMvc&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Mybatis&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Hibernate&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;React&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;小程序&nbsp;&nbsp;</div>
                 <h4>工具</h4>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;IDEA&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;WebStorm&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;PhpStorm&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;PyCharm&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Android Studio&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Visual Studio&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Visual Studio Code&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Unity3D&nbsp;&nbsp;</div>
             </div>
             &nbsp;
             <br><br><br><br><br><br><br>
