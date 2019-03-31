@@ -5,6 +5,10 @@ import com.blog.entity.Article;
 import com.blog.entity.Category;
 import com.blog.service.ArticleService;
 import com.blog.service.CategoryService;
+import com.blog.util.JsonUtil;
+import com.blog.util.RedisPoolUtil;
+import com.blog.util.RedisShardedPoolUtil;
+import com.fasterxml.jackson.databind.JavaType;
 import com.sun.org.apache.xerces.internal.xs.StringList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -110,7 +114,16 @@ public class ArticleAdminController {
     @RequestMapping("/list")
     public String list(Map<String, Object> map){
 
-        List<Article> list = articleService.queryAll();
+        List<Article> list;
+        String redisList = RedisPoolUtil.get("adminArticleList");
+
+        if (redisList == null){
+            list = articleService.queryAll();
+            RedisPoolUtil.setEx("adminArticleList", JsonUtil.obj2String(list), 100);
+        }else {
+            list = JsonUtil.string2Obj(redisList, List.class, Article.class);
+        }
+
         ArrayList<ArticleDTO> articleDTOArrayList = new ArrayList<ArticleDTO>();
 
         for (Article article: list) {

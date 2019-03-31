@@ -1,1 +1,1 @@
-<jsp:forward page="${pageContext.request.contextPath}/about"/>
+<jsp:forward page="/about"/>
