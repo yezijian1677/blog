@@ -7,24 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3a0052-7ba7-476e-a25f-2f77b42cee68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/common/RedisPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/common/RedisShardedPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/common/RedissonManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/util/DateTimeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/util/JsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/util/MD5Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/util/PropertiesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/util/RedisPoolUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/blog/util/RedisShardedPoolUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/ArticleAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/ArticleAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/CategoryAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/CategoryAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/util/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/util/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BLOG.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BLOG/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/BLOG/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/controller/ArticleController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,8 +44,9 @@
           <entry key="articleList" value="1" />
           <entry key="class" value="7" />
           <entry key="css" value="21" />
+          <entry key="gitignore" value="1" />
           <entry key="html" value="9" />
-          <entry key="java" value="207" />
+          <entry key="java" value="208" />
           <entry key="jpg" value="23" />
           <entry key="js" value="29" />
           <entry key="json" value="3" />
@@ -80,11 +64,11 @@
           <entry key="CSS" value="21" />
           <entry key="HTML" value="9" />
           <entry key="Image" value="31" />
-          <entry key="JAVA" value="207" />
+          <entry key="JAVA" value="208" />
           <entry key="JSON" value="3" />
           <entry key="JSP" value="193" />
           <entry key="JavaScript" value="29" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="13" />
           <entry key="XML" value="104" />
         </counts>
@@ -93,7 +77,7 @@
         <counts>
           <entry key="articleList" value="1" />
           <entry key="html" value="126" />
-          <entry key="java" value="6011" />
+          <entry key="java" value="6223" />
           <entry key="js" value="285" />
           <entry key="json" value="13" />
           <entry key="jsp" value="4097" />
@@ -104,7 +88,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="126" />
-          <entry key="JAVA" value="6011" />
+          <entry key="JAVA" value="6223" />
           <entry key="JSON" value="13" />
           <entry key="JSP" value="4092" />
           <entry key="JavaScript" value="290" />
@@ -121,23 +105,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/admin/CategoryAdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/admin/ArticleAdminController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="355">
+              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -193,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/static/editor.md-master/editormd.min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/testdetail.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin/bottom.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/dataSource.properties" />
@@ -222,6 +193,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/blog/util/JsonUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/ArticleAdminController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/admin/CategoryAdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/blog/controller/ArticleController.java" />
       </list>
     </option>
   </component>
@@ -352,16 +324,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -381,7 +343,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554039021719" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554039451071" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-editormd-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -400,11 +362,11 @@
       <recent name="com.blog.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\16773\Desktop\blog" />
       <recent name="C:\Users\16773\Desktop\blog\src\main\java\com\blog\util" />
       <recent name="C:\Users\16773\Desktop\blog\src\main\java\com\blog\common" />
       <recent name="C:\Users\16773\Desktop\blog\src\main\webapp\static\img" />
       <recent name="C:\Users\16773\Desktop\blog\src\main\webapp\static\editor.md-master\css" />
-      <recent name="C:\Users\16773\Desktop\blog\src\main\webapp\static\editor.md-master\plugins\emoji-dialog" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -704,18 +666,18 @@
       <workItem from="1553332483607" duration="1378000" />
       <workItem from="1553334055028" duration="688000" />
       <workItem from="1553340061554" duration="3119000" />
-      <workItem from="1554032534095" duration="6322000" />
+      <workItem from="1554032534095" duration="6826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133244000" />
+    <option name="totallyTimeSpent" value="133748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49704143" visible="true" weight="0.24061662" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49704143" visible="true" weight="0.24061662" />
       <window_info id="Structure" order="1" sideWeight="0.5007542" side_tool="true" weight="0.17430703" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -725,7 +687,7 @@
       <window_info id="Web" order="7" sideWeight="0.5005513" side_tool="true" weight="0.17430703" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45586106" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28509405" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39911798" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -790,9 +752,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/img/b-hipster.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/img/b-judah.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1060,13 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="45" column="30" lean-forward="true" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/util/RedisShardedPoolUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-741">
@@ -1132,6 +1084,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/admin/ArticleAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/admin/CategoryAdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1139,13 +1101,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/admin/ArticleAdminController.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-21">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/blog/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
         </state>
       </provider>
     </entry>

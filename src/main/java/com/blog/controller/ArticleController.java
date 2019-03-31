@@ -4,6 +4,8 @@ import com.blog.entity.Article;
 import com.blog.service.ArticleService;
 import com.blog.service.CategoryService;
 import com.blog.service.impl.ArticleServiceImpl;
+import com.blog.util.JsonUtil;
+import com.blog.util.RedisPoolUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +32,25 @@ public class ArticleController {
         Integer pageSize = 4;
 
         List<Article> list;
+        /**
+         * 查询redis里是否有
+         */
+        String redisList = RedisPoolUtil.get("articleList");
+
         if (page!=null){
             PageHelper.startPage(page, pageSize);
             try {
-                list = articleService.queryAll();
+                /**
+                 * 如果没有就查询，并且添加入redis
+                 */
+                if (redisList == null){
+                    list = articleService.queryAll();
+                    RedisPoolUtil.setEx("articleList", JsonUtil.obj2String(list), 100);
+                }else {
+                    //有的话只需要反序列化
+                    list = JsonUtil.string2Obj(redisList, List.class, Article.class);
+                }
+
                 PageInfo<Article> pageInfo = new PageInfo<Article>(list);
                 map.put("page", pageInfo);
             } finally {
