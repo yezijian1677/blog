@@ -2,6 +2,7 @@ package com.blog.dao;
 
 import com.blog.entity.Article;
 import com.blog.entity.Category;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -34,6 +35,6 @@ public interface ArticleMapper {
 
     List<Article> selectByYear(int year);
 
-    List<Article> selectArticleById(int id);
+    List<Article> selectArticleByCategoryName(@Param("cate") String cate);
 
 }

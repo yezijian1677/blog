@@ -205,8 +205,8 @@
     select * from article where time regexp #{year};
   </select>
 
-  <select id="selectArticleById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-    select * from article where catagory_id = #{id};
+  <select id="selectArticleByCategoryName" resultMap="BaseResultMap" parameterType="java.lang.String">
+   select * from article where catagory_id = (SELECT id FROM category WHERE category.`name`=#{cate})
   </select>
 
 

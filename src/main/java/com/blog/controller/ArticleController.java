@@ -1,6 +1,7 @@
 package com.blog.controller;
 
 import com.blog.entity.Article;
+import com.blog.entity.Category;
 import com.blog.service.ArticleService;
 import com.blog.service.CategoryService;
 import com.blog.service.impl.ArticleServiceImpl;
@@ -105,36 +106,44 @@ public class ArticleController {
 //    }
 
     @RequestMapping(value = "/list/category")
-    public String listCategory(Map<String, Object> map, @RequestParam(defaultValue = "1", required = true)Integer page){
+    public String listCategory(Map<String, Object> map, @RequestParam(defaultValue = "Java", required = true)String cate, @RequestParam(defaultValue = "1", required = true)Integer page){
         Integer pageSize = 4;
 
         List<Article> list;
-        if (page!=null){
-            PageHelper.startPage(page, pageSize);
-            try {
-                list = articleService.queryAll();
-                PageInfo<Article> pageInfo = new PageInfo<Article>(list);
-                map.put("page", pageInfo);
-            }finally {
-                PageHelper.clearPage();
-            }
-        }else {
-            list = new ArrayList<Article>();
+
+        PageHelper.startPage(page, pageSize);
+        try {
+            list = articleService.selectByCategory(cate);
+            PageInfo<Article> pageInfo = new PageInfo<>(list);
+            map.put("cate", cate);
+            map.put("page", pageInfo);
+        }finally {
+            PageHelper.clearPage();
         }
 
         map.put("ArticleList", list);
-        map.put("CategoryList", categoryService.queryAll());
+        String redisNamec = "category";
+        List<Category> categories;
+        String obj = RedisPoolUtil.get(redisNamec);
+        if (obj==null){
+            categories = categoryService.queryAll();
+            RedisPoolUtil.setEx(redisNamec, JsonUtil.obj2String(categories), 100);
+        }else {
+            categories = JsonUtil.string2Obj(obj, List.class, Category.class);
+        }
+        map.put("CategoryList", categories);
+
         return "tag";
     }
 
-    @RequestMapping(value = "/list/category", params = "cate")
-    public String listCategory(Map<String, Object> map, String cate){
-
-        map.put("ArticleList", articleService.selectByCategory(cate));
-        map.put("CategoryList", categoryService.queryAll());
-
-        return "tag";
-    }
+//    @RequestMapping(value = "/list/category", params = "cate")
+//    public String  listArticleByCategoryName(Map<String, Object> map, String cate,@RequestParam(defaultValue = "1", required = true)Integer page){
+//
+//        map.put("ArticleList", articleService.selectByCategory(cate));
+//        map.put("CategoryList", categoryService.queryAll());
+//
+//        return "tag";
+//    }
 
 
 

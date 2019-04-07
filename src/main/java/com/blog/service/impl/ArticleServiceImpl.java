@@ -76,7 +76,6 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public List<Article> selectByCategory(String category) {
-        int id = categoryMapper.selectArticleIdByCategory(category).getId();
-        return articleMapper.selectArticleById(id);
+        return articleMapper.selectArticleByCategoryName(category);
     }
 }
