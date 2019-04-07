@@ -56,7 +56,7 @@
             <div class="row">
                 <br>
                 <div class="col s12 m12 l12 xl12">
-                    <a class="chip hoverable z-depth-1 cyan lighten-3" href="${pageContext.request.contextPath}/article/list/category">All</a>
+                    <a class="chip hoverable z-depth-1 cyan lighten-3" href="${pageContext.request.contextPath}/article/list/category">Summary</a>
                     <c:forEach items="${CategoryList}" var="category">
                         <a class="chip hoverable z-depth-1 cyan lighten-3" href="${pageContext.request.contextPath}/article/list/category?cate=${category.name}">${category.name}</a>
                     </c:forEach>
@@ -94,8 +94,10 @@
                 <div class="col s12 m12 l12 xl12">
                     <div class="row center">
                         <ul class="pagination">
-                            <li class="waves-effect"><a href="${pageContext.request.contextPath}/article/list/category?cate=${cate}&page=${page.prePage}"><i class="material-icons">chevron_left</i></a></li>
-                            <li class="waves-effect"><a href="${pageContext.request.contextPath}/article/list/category?cate=${cate}&page=${page.nextPage}"><i class="material-icons">chevron_right</i></a></li>
+
+                            <li id="my1" class="waves-effect"><a href="${pageContext.request.contextPath}/article/list/category?cate=${cate}&page=${page.prePage}"><i class="material-icons">chevron_left</i></a></li>
+                            <li id="my2" class="waves-effect"><a href="${pageContext.request.contextPath}/article/list/category?cate=${cate}&page=${page.nextPage}"><i class="material-icons">chevron_right</i></a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -115,5 +117,19 @@
         <li><a class="btn-floating blue"><i class="material-icons">bug_report</i></a></li>
     </ul>
 </div>
+
+<script>
+    if (${page.isFirstPage}) {
+        var my1 = document.getElementById("my1");
+        my1.className = "disabled";
+        my1.style.cssText = "pointer-events:none;"
+    }
+    if (${page.isLastPage}) {
+        var my2 = document.getElementById("my2");
+        my2.className = "disabled";
+        my2.style.cssText = "pointer-events:none;"
+    }
+    console.log();
+</script>
 
 <jsp:include page="bottom.jsp"/>

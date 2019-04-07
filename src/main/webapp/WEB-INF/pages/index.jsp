@@ -74,8 +74,8 @@
         <div class="col s12 m12 l12 xl12">
             <div class="row center">
                 <ul class="pagination">
-                    <li class="disabled"><a href="${pageContext.request.contextPath}/article/list?page=${page.prePage}"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="waves-effect"><a href="${pageContext.request.contextPath}/article/list?page=${page.nextPage}"><i class="material-icons">chevron_right</i></a></li>
+                    <li id="my3" class="waves-effect"><a href="${pageContext.request.contextPath}/article/list?page=${page.prePage}"><i class="material-icons">chevron_left</i></a></li>
+                    <li id="my4" class="waves-effect"><a href="${pageContext.request.contextPath}/article/list?page=${page.nextPage}"><i class="material-icons">chevron_right</i></a></li>
                 </ul>
             </div>
         </div>
@@ -93,6 +93,20 @@
         <li><a class="btn-floating blue"><i class="material-icons">bug_report</i></a></li>
     </ul>
 </div>
+
+<script>
+    if (${page.isFirstPage}) {
+        var my3 = document.getElementById("my3");
+        my3.className = "disabled";
+        my3.style.cssText = "pointer-events:none;"
+    }
+    if (${page.isLastPage}) {
+        var my4 = document.getElementById("my4");
+        my4.className = "disabled";
+        my4.style.cssText = "pointer-events:none;"
+    }
+    console.log();
+</script>
 
 
 <jsp:include page="bottom.jsp"/>
