@@ -30,34 +30,18 @@ public class ArticleController {
     @RequestMapping("/list")
     public String list(Map<String, Object> map, @RequestParam(defaultValue = "1", required = true)Integer page){
         Integer pageSize = 4;
-
         List<Article> list;
-        /**
-         * 查询redis里是否有
-         */
-        String redisList = RedisPoolUtil.get("articleList");
-
         if (page!=null){
             PageHelper.startPage(page, pageSize);
             try {
-                /**
-                 * 如果没有就查询，并且添加入redis
-                 */
-                if (redisList == null){
-                    list = articleService.queryAll();
-                    RedisPoolUtil.setEx("articleList", JsonUtil.obj2String(list), 100);
-                }else {
-                    //有的话只需要反序列化
-                    list = JsonUtil.string2Obj(redisList, List.class, Article.class);
-                }
-
-                PageInfo<Article> pageInfo = new PageInfo<Article>(list);
+                list = articleService.queryAll();
+                PageInfo<Article> pageInfo = new PageInfo<>(list);
                 map.put("page", pageInfo);
             } finally {
                 PageHelper.clearPage();
             }
         } else {
-            list = new ArrayList<Article>();
+            list = new ArrayList<>();
         }
 
         map.put("list", list);
@@ -65,10 +49,29 @@ public class ArticleController {
         return "index";
     }
 
+    /**
+     * 返回文章详情
+     * @param map
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/to_detail", params = "id")
     public String toDetail(Map<String, Object> map, String id){
+
         int id1 = Integer.parseInt(id);
-        map.put("detail", articleService.selectById(id1));
+        String redisName = "ArticleDetail"+id1;
+        String obj = RedisPoolUtil.get(redisName);
+        Article article;
+
+        if (obj == null){
+            article = articleService.selectById(id1);
+            RedisPoolUtil.setEx(redisName, JsonUtil.obj2String(article), 100);
+            map.put("detail", article);
+        }else {
+            article = JsonUtil.string2Obj(obj, Article.class);
+            map.put("detail", article);
+        }
+
         return "post";
     }
 
@@ -76,7 +79,19 @@ public class ArticleController {
     public String listTitle(Map<String, Object> map){
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
-        map.put("sub", articleService.selectByYear(year));
+
+        String redisName = "ArticleDetailYear"+year;
+        String obj = RedisPoolUtil.get(redisName);
+        List<Article> article;
+
+        if (obj == null){
+            article = articleService.selectByYear(year);
+            RedisPoolUtil.setEx(redisName, JsonUtil.obj2String(article), 100);
+            map.put("sub", article);
+        }else {
+            article = JsonUtil.string2Obj(obj, List.class, Article.class);
+            map.put("sub", article);
+        }
         map.put("nowYear", year);
 
         return "archive";
