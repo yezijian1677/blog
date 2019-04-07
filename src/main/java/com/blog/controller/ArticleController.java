@@ -8,6 +8,7 @@ import com.blog.util.JsonUtil;
 import com.blog.util.RedisPoolUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -76,9 +77,7 @@ public class ArticleController {
     }
 
     @RequestMapping(value = "/list/title")
-    public String listTitle(Map<String, Object> map){
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
+    public String listTitle(Map<String, Object> map, @RequestParam(defaultValue = "2019", required = false)Integer year){
 
         String redisName = "ArticleDetailYear"+year;
         String obj = RedisPoolUtil.get(redisName);
@@ -97,13 +96,13 @@ public class ArticleController {
         return "archive";
     }
 
-    @RequestMapping(value = "/list/title", params = "year")
-    public String listTitle(Map<String, Object> map, String year){
-        int year1 = Integer.parseInt(year);
-        map.put("sub", articleService.selectByYear(year1));
-        map.put("nowYear", year1);
-        return "archive";
-    }
+//    @RequestMapping(value = "/list/title", params = "year")
+//    public String listTitle(Map<String, Object> map, String year){
+//        int year1 = Integer.parseInt(year);
+//        map.put("sub", articleService.selectByYear(year1));
+//        map.put("nowYear", year1);
+//        return "archive";
+//    }
 
     @RequestMapping(value = "/list/category")
     public String listCategory(Map<String, Object> map, @RequestParam(defaultValue = "1", required = true)Integer page){
