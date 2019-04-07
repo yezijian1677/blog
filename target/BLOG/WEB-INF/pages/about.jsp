@@ -102,29 +102,24 @@
                 <h2>技能点</h2>
                 <br>
                 <h4>语言</h4>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;C&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Java&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;C&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;JavaScript&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;SQL&nbsp;&nbsp;</div>
+                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;ES6&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Html&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Css&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;JavaScript&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Markdown&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;SQL&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Python&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;ES6&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;PHP&nbsp;&nbsp;</div>
+
                 <h4>框架/库</h4>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;jQuery&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Spring&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;SpringMvc&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Mybatis&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Hibernate&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;React&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;小程序&nbsp;&nbsp;</div>
                 <h4>工具</h4>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;IDEA&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;WebStorm&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;PhpStorm&nbsp;&nbsp;</div>
-                <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;PyCharm&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Visual Studio&nbsp;&nbsp;</div>
                 <div class="chip z-depth-1 hoverable">&nbsp;&nbsp;Visual Studio Code&nbsp;&nbsp;</div>
             </div>

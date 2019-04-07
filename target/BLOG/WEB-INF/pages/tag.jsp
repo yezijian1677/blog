@@ -129,7 +129,6 @@
         my2.className = "disabled";
         my2.style.cssText = "pointer-events:none;"
     }
-    console.log();
 </script>
 
 <jsp:include page="bottom.jsp"/>

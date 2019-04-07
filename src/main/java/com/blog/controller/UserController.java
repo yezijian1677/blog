@@ -54,7 +54,7 @@ public class UserController {
             userLoginInfo.setUserId(userId1);
             int log = adminLoginService.insert(userLoginInfo);
 
-            return "redirect:list";
+            return "admin/index";
         }
         return "redirect:to_login";
     }

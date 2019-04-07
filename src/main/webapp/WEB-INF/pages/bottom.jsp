@@ -5,7 +5,7 @@
 <div class="modal" id="donate-modal">
     <div class="modal-content">
         <h5 class="center">使用支付宝请我喝咖啡</h5>
-        <img src="${pageContext.request.contextPath}/static/img/" width="284px" height="387px" class="center-block">
+        <img src="${pageContext.request.contextPath}/static/img/Donate.jpg" width="284px" height="387px" class="center-block">
     </div>
 </div>
 

@@ -105,7 +105,6 @@
         my4.className = "disabled";
         my4.style.cssText = "pointer-events:none;"
     }
-    console.log();
 </script>
 
 
